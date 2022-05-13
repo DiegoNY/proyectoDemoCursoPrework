@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apilamiento</title>
+    <style>
+        div {
+            position: absolute;
+            background-color: palegoldenrod;
+        }
+        /*z-index hace que el valor mayor que ingreses se muestre primero solo aplica a los padres con padres mientras si usas un z-infex en hijo solo aplica en los elementos hijos que esten dentro del padre mostrandose primeros como si fuesen el padre :D*/
+        .one{ 
+            z-index: 4;
+        }
+        .two{
+            z-index: 5;
+        }
+        .red {
+            width: 20px;
+            height: 20px;
+            background:red;
+            z-index: 5;
+        }
+        .blue{
+            width: 20px;
+            height: 20px;
+            background: blue;
+            z-index: 4;
+        }
+        .yellow{
+            width: 20px;
+            height: 20px;
+            background:yellow;
+            z-index: 8;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="one">Diego</div>
+    <div class="two">Raul</div>
+    <section>
+        <div class="red">red</div>
+        <div class="blue"> blue
+            <div class="yellow">yellow</div>
+        </div>
+    </section>
+</body>
+</html>
