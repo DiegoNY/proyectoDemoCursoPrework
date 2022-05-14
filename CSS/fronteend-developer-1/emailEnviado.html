@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /*variables en css :o*/
+        :root{
+            /*colores de las letras*/
+            --white:#FFFFFF;
+            --very-light-pink: #C7C7C7;
+            --text-input-field:#F7F7F7;
+            --hospital-green: #ACD9B2;
+            /*tamaño de la letra*/
+            --sm:14px;
+            --md:16px;
+            --lg:18px; 
+        }
+        body{
+            /*quitando margenes y definiendo el tipo de letra*/
+            margin: 0;
+            font-family: 'Quicksand', sans-serif;
+        }
+        .login{
+            width: 100%;
+            /*un alto del 100 % que se vee en la pantalla eso es view height = vh*/
+            height: 100vh;
+            /*centrar elementos con css grid*/
+            display: grid;
+            place-items: center;
+        }
+        .form-container{
+           /*creando 3 filas*/ 
+            display: grid;
+            /*titulo y subtitulo auto password e input una fraccion el resto que seria el button lo que sobre :D*/
+            grid-template-rows: auto 1fr auto;
+            /*colocamos un ancho por que no se muestra en toda la pantalla*/
+            width: 300px;
+            /*centramos nuestros elementos*/
+            justify-items: center;
+        }
+        .logo{
+            /*aumentamos tamaño*/
+            width: 150px;
+            /*margen para la separacion*/
+            margin-bottom: 48px;
+            /*alineamos y centramos*/
+            justify-self: center;
+            /*para que no aparezca en formato desktop con responsive hacemos que aparezca esta mas abajo  al final🙇‍♂️*/
+            display: none;
+        }
+        .title{
+            /*utilizandeo las variables colocamos el tamaño de letra*/
+            font-size: var (--lg);
+            /*un margen para el texto recuerda todos son cajas u.u */
+            margin-bottom: 12px;
+            /*centramos el titulo*/
+            text-align: center;
+
+        }
+        .subtitle{
+            /*colocamos color que esta en la varible*/
+            color: var(--very-light-pink);
+            /*colocamos el tamaño de la letra*/
+            font-size: var(--md);
+            /*definimos el grosor de la letra */
+            font-weight: 300px;
+            /*colocamos un margin para que no se cruzen los parrafos*/
+            margin-top: 0;
+            /*margen para separarlo de los inputs */
+            margin-bottom: 32px;
+            /*centramos*/
+            text-align: center;
+        }
+        .email-image{
+            /*le damos ancho y alto a nuestra bolita detras de la imagen :o*/
+            width:132px;
+            height: 132px;
+            /*redondeamos al completo*/
+            border-radius: 50%;
+            /*colocamos el valor*/
+            background-color: var(--text-input-field);
+            /*centramos el icono*/
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /*le agregamos un margen recuerda aplicas la de ojjo no se que mas xde osea tienes que ver como queda y jugar :D */
+            margin-bottom: 24px;
+        }
+        .email-image{
+            /*cambiamos la imagen de adentro */
+            width: 80px;
+        }
+        .resend{
+            font-size: var(--sm);
+        }
+        .resend span{
+            color: var(--very-light-pink);
+        }
+        .resend a{
+            color: var(--hospital-green);
+            /*le quitamos el subrrallado a el enlace (link)🍳*/
+            text-decoration: none;
+        }
+        
+        .form{
+            /*desplegamos las cajas en un formato flexible*/
+            display: flex;
+            /*las direccionamos*/
+            flex-direction: column;
+        }
+      
+        .primary-button{
+            /*colocamos el color con la varible*/
+            background-color: var(--hospital-green);
+            /*colocamos el radio de los bordes*/
+            border-radius: 8px;
+            /*le quitamos bordes*/
+            border: none;
+            /*colocamos color con las varables*/
+            color: var(--white);
+            /*colcando ancho ocupa el 100% de la caja*/
+            width: 100%;
+            /*muestra manita no flecho :o*/
+            cursor: pointer;
+            /*agrandamos la letra*/
+            font-size: var(--md);
+            /*le colocamos un grosor :o*/
+            font-weight: bold;
+            /*le agregamos altura*/
+            height: 50px;
+
+        }
+        .login-button{
+            /*margen de alto*/
+            top: 14px;
+            /*margen alrededor de las cajas*/
+            margin-bottom: 30px;
+        }
+        /*responsive :o*/
+        /*para que el logo aparezca cuando la pantalla sea menor a 640 px :o*/
+        @media(max-width:640px){
+            /*desplegamos el logo para poder verlo*/
+            .logo{
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="login">
+        <div class="form-container">
+            <img src="./logos/logo_yard_sale.svg" alt="logo" class="logo">
+            <h1 class="title">Email has been sent!</h1>
+            <p class="subtitle">Please check your inbox for instructions on how to reset the posword</p>
+             <div class="email-image">
+                 <img src="./icons/email.svg" alt="email">
+             </div>
+             <button class="primary-button login-button" >Login</button>
+             <p class="resend">
+                <span>Didn't receive the email?</span>
+                <a href="/">Resend</a>
+             </p>
+        </div>
+    </div>
+</body>
+</html>
+</body>
+</html>
