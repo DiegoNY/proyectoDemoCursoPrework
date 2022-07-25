@@ -57,9 +57,9 @@
             /*utilizandeo las variables colocamos el tamaño de letra*/
             font-size: var (--lg);
             /*un margen para el texto recuerda todos son cajas u.u */
-            margin-bottom: 12px;
+            margin-bottom: 30px;
             /*centramos el titulo*/
-            text-align: center;
+            text-align: start;
 
         }
         .subtitle{
@@ -80,6 +80,11 @@
             /*desplegamos las cajas en un formato flexible*/
             display: flex;
             /*las direccionamos*/
+            flex-direction: column;
+            
+        }
+        .form div{
+            display: flex;
             flex-direction: column;
         }
         .label{
@@ -106,15 +111,20 @@
             /*para que se vea mejor :p*/
             margin-bottom: 12px;
         }
-        .primary-button{
+        .input-name,
+        .input-email,
+        .input-password {
+            margin-bottom: 12px;
+        }
+        .secondary-button{
             /*colocamos el color con la varible*/
-            background-color: var(--hospital-green);
+            background-color: var(--white);
             /*colocamos el radio de los bordes*/
             border-radius: 8px;
             /*le quitamos bordes*/
-            border: none;
+            border: 1px solid var(--hospital-green);
             /*colocamos color con las varables*/
-            color: var(--white);
+            color: var(--hospital-green);
             /*colcando ancho ocupa el 100% de la caja*/
             width: 100%;
             /*muestra manita no flecho :o*/
@@ -126,6 +136,11 @@
             /*le agregamos altura*/
             height: 50px;
 
+        }
+        .value{
+            color: var(--very-light-pink);
+            font-size: var(--md);
+            margin: 8px  0 32px 0;
         }
         .login-button{
             /*margen de alto*/
@@ -140,21 +155,30 @@
             .logo{
                 display: block;
             }
+            .form{
+                height: 100%;
+                justify-content: space-between;
+            }
+            .form-container{
+                height: 100%;
+            }
         }
     </style>
 </head>
 <body>
     <div class="login">
         <div class="form-container">
-            <img src="./logos/logo_yard_sale.svg" alt="logo" class="logo">
-            <h1 class="title">Create a new password</h1>
-            <p class="subtitle">Enter a new password for your account</p>
+            <h1 class="title">My account</h1>
             <form action="/" class="form">
+                <div>
+                <label for="password" class="label">Name</label>
+                <p class="value">Deigo Ferre</p>
                 <label for="password" class="label">Password</label>
-                <input type="text" id="email" placeholder="email@xample.com" class="input input-password">
+                <p class="value">Diego@gmail.com</p>
                 <label for="password" class="label">Password</label>
-                <input type="password" id="pasword" placeholder="*********" class="input input-password">
-                <input type="submit" value="confirm" class="primary-button login-button">
+                <p class="value">**********</p>
+                </div>
+                <input type="submit" value="Edit" class="secondary-button login-button">
             </form>
         </div>
     </div>
